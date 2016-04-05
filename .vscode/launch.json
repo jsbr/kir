@@ -1,0 +1,96 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "mocha",
+            "type": "node",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "stopOnEntry": false,
+            "args": [
+                "--colors",
+                "${workspaceRoot}/test/**/*.js"
+            ], //you can specify paths to specific tests here
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": null,
+            "env": {
+                "NODE_ENV": "testing"
+            }
+        },
+        {
+            "name": "mocha single test",
+            "type": "node",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "stopOnEntry": false,
+            "args": [
+                "--colors",
+                "-g",
+                "create file ressource",
+                "${workspaceRoot}/test/**/*.js"
+            ], //you can specify paths to specific tests here
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": null,
+            "env": {
+                "NODE_ENV": "testing"
+            }
+        },
+        
+        {
+            "name": "kir task",
+            "type": "node",
+            "program": "${workspaceRoot}/src/bin/kir.js",
+            "stopOnEntry": false,
+            "args": [
+                "tasks"
+            ], //you can specify paths to specific tests here
+            "cwd": "${workspaceRoot}/exemple/test",
+            "runtimeExecutable": null,
+            "env": {
+                "NODE_ENV": "testing"
+            }
+        },
+        
+        {
+            "name": "kir web.compile",
+            "type": "node",
+            "program": "${workspaceRoot}/src/bin/kir.js",
+            "stopOnEntry": false,
+            "args": [
+                "web.compile",
+                "-w"
+            ], //you can specify paths to specific tests here
+            "cwd": "${workspaceRoot}/exemple/test",
+            "runtimeExecutable": null,
+            "env": {
+                "NODE_ENV": "testing"
+            }
+        },
+        
+        
+        {
+            "name": "kir default",
+            "type": "node",
+            "program": "${workspaceRoot}/src/bin/kir.js",
+            "stopOnEntry": false,
+            "args": [
+            ], //you can specify paths to specific tests here
+            "cwd": "${workspaceRoot}/exemple/test",
+            "runtimeExecutable": null,
+            "env": {
+                "NODE_ENV": "testing"
+            }
+        },
+        
+        {
+            "name": "Attach",
+            "type": "node",
+            "request": "attach",
+            "port": 5858,
+            "address": "localhost",
+            "restart": false,
+            "sourceMaps": false,
+            "outDir": null,
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": null
+        }
+    ]
+}

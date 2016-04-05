@@ -1,0 +1,28 @@
+{
+  "name": "kir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "rx": "^4.1.0",
+    "vinyl-fs": "^2.2.1"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "gulp-rename": "^1.2.2",
+    "mocha": "*",
+    "sinon": "^1.17.3"
+  },
+  "bin": {
+    "kir": "src/bin/kir.js"
+  },
+  "directories":{
+        "src": "src"
+    } 
+}
